@@ -3,87 +3,43 @@ var webpackConfig = require('./webpack.test.js');
 
 module.exports = function(config) {
   config.set({
-
-    // base path that will be used to resolve all patterns (eg. files, exclude)
-    basePath: '../',
-
-    // frameworks to use
-    // available frameworks: https://npmjs.org/browse/keyword/karma-adapter
+    basePath: '../', // root of the project is one level up from this file
+    browsers: ['Chrome'], // run tests in Chrome
     frameworks: ['jasmine'],
-
-    // list of files / patterns to load in the browser
-    files: [
+    files: [ // list of files / patterns to load in the browser
       {
-        pattern: './test-config/karma-test-shim.js',
-        watched: true
+        pattern: './test-config/karma-test-shim.js'
       },
       {
         pattern: './src/assets/**/*',
         watched: false,
-        included: false,
-        served: true,
-        nocache: false
+        included: false
       }
     ],
-
+    logLevel: config.LOG_INFO,
+    // loggers: [],
     proxies: {
       '/assets/': '/base/src/assets/'
     },
-
-    // preprocess matching files before serving them to the browser
-    // available preprocessors: https://npmjs.org/browse/keyword/karma-preprocessor
-    preprocessors: {
+    preprocessors: { // preprocess matching files before serving them to the browser
       './test-config/karma-test-shim.js': ['webpack', 'sourcemap']
     },
+    // test results reporter to use
+    reporters: config.coverage ? ['kjhtml', 'coverage-istanbul'] : ['mocha', 'kjhtml'],
 
+    // webpack configuration
     webpack: webpackConfig,
-
     webpackMiddleware: {
       stats: 'errors-only'
     },
-
     webpackServer: {
       noInfo: true
     },
 
-    browserConsoleLogOptions: {
-      level: 'log',
-      format: '%b %T: %m',
-      terminal: true
-    },
-
+    // coverage/istanbul configuration
     coverageIstanbulReporter: {
       reports: [ 'html', 'lcovonly' ],
       fixWebpackSourcePaths: true
-    },
-
-    // test results reporter to use
-    // possible values: 'dots', 'progress'
-    // available reporters: https://npmjs.org/browse/keyword/karma-reporter
-    reporters: config.coverage ? ['kjhtml', 'dots', 'coverage-istanbul'] : ['kjhtml', 'dots'],
-
-    // web server port
-    port: 9876,
-
-    // enable / disable colors in the output (reporters and logs)
-    colors: true,
-
-    // level of logging
-    // possible values: config.LOG_DISABLE || config.LOG_ERROR || config.LOG_WARN || config.LOG_INFO || config.LOG_DEBUG
-    logLevel: config.LOG_INFO,
-
-    // enable / disable watching file and executing tests whenever any file changes
-    autoWatch: true,
-
-    // start these browsers
-    // available browser launchers: https://npmjs.org/browse/keyword/karma-launcher
-    browsers: ['Chrome'],
-
-    // Continuous Integration mode
-    // if true, Karma captures browsers, runs the tests and exits
-    singleRun: false
-    // Concurrency level
-    // how many browser should be started simultaneous
-    // concurrency: Infinity
+    }
   });
 }
