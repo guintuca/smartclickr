@@ -43,7 +43,7 @@ describe('The Home page', () => {
     expect(h3.innerText).toBe("Welcome to SmartClickr!");
   });
 
-  xit('should have a button that says "Toggle Menu"', () => {
+  it('should have a button that says "Toggle Menu"', () => {
     fixture.detectChanges();
     const btn: HTMLImageElement = fixture.debugElement.query(By.css('button')).nativeElement;
     expect(btn.innerHTML).toBe('Toggle Menu');
