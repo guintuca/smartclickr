@@ -5,6 +5,8 @@ import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 import { ListPage } from '../pages/list/list';
+import { LoginPage } from '../pages/login/login';
+import { TakePollPage } from '../pages/take-poll/take-poll';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -14,7 +16,9 @@ import { ApiProvider } from '../providers/api/api';
   declarations: [
     MyApp,
     HomePage,
-    ListPage
+    ListPage,
+    LoginPage,
+    TakePollPage
   ],
   imports: [
     BrowserModule,
@@ -24,7 +28,9 @@ import { ApiProvider } from '../providers/api/api';
   entryComponents: [
     MyApp,
     HomePage,
-    ListPage
+    ListPage,
+    LoginPage,
+    TakePollPage
   ],
   providers: [
     StatusBar,
