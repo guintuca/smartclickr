@@ -1,14 +1,13 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { By }           from '@angular/platform-browser';
 import { DebugElement } from '@angular/core';
-import { HomePage } from './home';
 import { IonicModule, Platform, NavController} from 'ionic-angular/index';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { PlatformMock, StatusBarMock, SplashScreenMock } from '../../../test-config/mocks-ionic';
+import { HomePage } from './home';
 
 describe('The Home page', () => {
-  let de: DebugElement;
   let comp: HomePage;
   let fixture: ComponentFixture<HomePage>;
 
@@ -30,7 +29,6 @@ describe('The Home page', () => {
   beforeEach(() => {
     fixture = TestBed.createComponent(HomePage);
     comp = fixture.componentInstance;
-    de = fixture.debugElement.query(By.css('h3'));
   });
 
   it('should be defined', () => {
@@ -39,13 +37,13 @@ describe('The Home page', () => {
 
   it('should say "Welcome to SmartClickr!" at the top', () => {
     fixture.detectChanges();
-    const h3 = de.nativeElement;
+    const h3 = HTMLImageElement = fixture.debugElement.query(By.css('h3')).nativeElement;
     expect(h3.innerText).toBe("Welcome to SmartClickr!");
   });
 
-  it('should have a button that says "Toggle Menu"', () => {
+  xit('should have a button that says "Begin Poll"', () => {
     fixture.detectChanges();
     const btn: HTMLImageElement = fixture.debugElement.query(By.css('button')).nativeElement;
-    expect(btn.innerHTML).toBe('Toggle Menu');
+    expect(btn.innerHTML).toBe('Begin Poll');
   });
 });
