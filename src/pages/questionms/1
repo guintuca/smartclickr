@@ -1,0 +1,86 @@
+<ion-header>
+	<ion-navbar>
+		<ion-title>
+			SmartClickr
+		</ion-title>
+	</ion-navbar>
+</ion-header>
+
+<ion-content padding>
+
+	<h2>Question Page</h2>
+
+	<ion-list>
+
+		<ion-item>
+			<ion-label color="primary">Cheese</ion-label>
+			<ion-checkbox color="primary" checked="false"></ion-checkbox>
+		</ion-item>
+
+		<ion-item>
+			<ion-label color="primary">Pepperoni</ion-label>
+			<ion-checkbox color="primary" checked="false"></ion-checkbox>
+		</ion-item>
+
+		<ion-item>
+			<ion-label color="primary">Sausage</ion-label>
+			<ion-checkbox color="primary" checked="false"></ion-checkbox>
+		</ion-item>
+
+		<ion-item>
+			<ion-label color="primary">Ham</ion-label>
+			<ion-checkbox color="primary" checked="false"></ion-checkbox>
+		</ion-item>
+
+		<ion-item>
+			<ion-label color="primary">Bacon</ion-label>
+			<ion-checkbox color="primary" checked="false"></ion-checkbox>
+		</ion-item>
+
+		<ion-item>
+			<ion-label color="primary">Mushrooms</ion-label>
+			<ion-checkbox color="primary" checked="false"></ion-checkbox>
+		</ion-item>
+
+		<ion-item>
+			<ion-label color="primary">Onions</ion-label>
+			<ion-checkbox color="primary" checked="false"></ion-checkbox>
+		</ion-item>
+
+		<ion-item>
+			<ion-label color="primary">Red Onions</ion-label>
+			<ion-checkbox color="primary" checked="false"></ion-checkbox>
+		</ion-item>
+
+		<ion-item>
+			<ion-label color="primary">Red Peppers</ion-label>
+			<ion-checkbox color="primary" checked="false"></ion-checkbox>
+		</ion-item>
+
+		<ion-item>
+			<ion-label color="primary">Green Peppers</ion-label>
+			<ion-checkbox color="primary" checked="false"></ion-checkbox>
+		</ion-item>
+
+		<ion-item>
+			<ion-label color="primary">Spinach</ion-label>
+			<ion-checkbox color="primary" checked="false"></ion-checkbox>
+		</ion-item>
+
+		<ion-item>
+			<ion-label color="primary">Pineapples</ion-label>
+			<ion-checkbox color="primary" checked="false"></ion-checkbox>
+		</ion-item>
+
+		<ion-item>
+			<ion-label color="primary">Black Olives</ion-label>
+			<ion-checkbox color="primary" checked="false"></ion-checkbox>
+		</ion-item>
+
+		<ion-item>
+			<ion-input color="primary" placeholder="Other Toppings Enter Here"></ion-input>
+			<ion-checkbox color="primary" checked="false"></ion-checkbox>
+		</ion-item>
+	</ion-list>
+
+</ion-content>
